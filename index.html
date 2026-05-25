@@ -1,43 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>My Mini App</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Telegram Earning App</title>
+
   <script src="https://telegram.org/js/telegram-web-app.js"></script>
 
-  <style>
-    body{
-      background:#111;
-      color:white;
-      text-align:center;
-      font-family:Arial;
-      padding-top:50px;
-    }
-
-    button{
-      padding:15px 25px;
-      border:none;
-      border-radius:10px;
-      background:#0088cc;
-      color:white;
-      font-size:18px;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h1>Telegram Mini App</h1>
+<div class="container">
 
-<button onclick="showMsg()">Click Me</button>
+  <h1>💰 Earn Coins</h1>
 
-<script>
-  let tg = window.Telegram.WebApp;
+  <div class="card">
+    <h2 id="username">User</h2>
+    <p>Balance</p>
+    <h1 id="balance">0</h1>
+  </div>
 
-  tg.expand();
+  <div class="buttons">
+    <button onclick="watchAd()">🎥 Watch Ad</button>
 
-  function showMsg(){
-    alert("Mini App Working!");
-  }
-</script>
+    <button onclick="dailyBonus()">🎁 Daily Bonus</button>
 
+    <button onclick="copyReferral()">👥 Referral</button>
+  </div>
+
+  <div class="history">
+    <h3>Activity</h3>
+    <ul id="activity"></ul>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
